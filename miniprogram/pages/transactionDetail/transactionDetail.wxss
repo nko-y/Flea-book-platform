@@ -1,0 +1,189 @@
+/* pages/transactionDetail/transactionDetail.wxss */
+page{
+  background-color: rgb(252, 251, 249);
+  height: 100%;
+}
+
+.bottomBar{
+  position:fixed;
+  bottom:0rpx;
+  height:100rpx;
+  width:100%;
+  background-color: rgb(216,225,222);
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.bookshelfBox{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.bookshelf{
+  width:80rpx;
+  height:80rpx;
+  margin:10rpx;
+  margin-left:20rpx;
+}
+
+.buttonBar{
+  margin:20rpx;
+  border: 3rpx solid rgb(129, 156, 136);
+  border-radius:20rpx;
+  padding:10rpx;
+}
+
+.bannerGrid{
+  height:100%;  
+}
+
+.swiper{
+  height:1400rpx
+}
+
+.text1{
+  margin-right:10rpx;
+  padding-right:2.4rpx dashed  rgb(129, 156, 136);
+  font-size:90%;
+}
+.text2{
+  padding-left:10rpx;
+  border-left:2.4rpx dashed  rgb(129, 156, 136);
+  font-size:90%;
+}
+
+.text3{
+  font-size:90%;
+}
+/*使屏幕变暗  */
+.commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+/*对话框 */
+.commodity_attr_box {
+  height: 500rpx;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: -80rpx;
+  left: 0;
+  z-index: 2000;
+  background: rgb(252, 251, 249);
+  padding-top: 20rpx;
+  border-radius:80rpx;
+  box-shadow: 0rpx -2rpx 4rpx grey;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkInfo1{
+  display: flex;
+  flex-direction: row;
+  margin-left:70rpx;margin-right:70rpx;
+}
+
+.checkInfo2{
+  border:2rpx dotted rgb(129, 156, 136);
+  border-radius: 8rpx;
+  padding-top:12rpx;padding-bottom:12rpx;
+  padding-left:20rpx;padding-right:20rpx;
+  margin-left:40rpx;margin-right:40rpx;
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+
+}
+
+.checkImg{
+  height:160rpx;width:120rpx;
+  margin-top:20rpx;
+  margin-bottom:40rpx;
+  background-color: rgb(216,225,222);
+}
+
+.checkText{
+  margin-top:20rpx;margin-bottom:40rpx;margin-left:40rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.minus{
+  width:40rpx;
+  height:40rpx;
+  margin-right:20rpx;
+}
+
+
+.plus{
+  width:40rpx;
+  height:40rpx;
+  margin-left:20rpx;
+}
+
+.submit{
+  margin-top:30rpx;
+  margin-left:auto;margin-right:auto;
+  width:140rpx;
+  height:80rpx;
+  background-color: rgb(216,225,222);
+  border-radius:10rpx;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkPrice{
+  color:rgb(129, 156, 136);
+  font-weight: bold;
+  font-size:110%;
+}
+
+.checkTip{
+  color:grey;
+  font-size:90%;
+}
+
+.numberText{
+  font-size:95%;
+}
+
+.leftBox{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.rec{
+  width:30rpx;height:30rpx;
+  margin-right:20rpx;
+  background-color: rgb(216,225,222);
+}
+
+.number{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.numberText_{
+  font-size:85%;
+  color:grey;
+}
+
+.checkText_{
+  margin:auto;
+}

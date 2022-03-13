@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "myReleases": "../../components/myReleases/myReleases"
+  },
+
+  "enablePullDownRefresh":false
+}

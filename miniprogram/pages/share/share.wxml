@@ -1,0 +1,9 @@
+<!--pages/share/share.wxml-->
+<view class="occTabBar"></view>
+
+<loading hidden="{{!isLoading}}">正在加载</loading>
+
+<view class="BookItems" wx:for="{{stackList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+    <bookStack item="{{item}}"></bookStack>
+</view>
+

@@ -1,0 +1,51 @@
+/* custion-tab-bar/index.wxss */
+/* custom-tab-bar/mytabbar.wxss */
+.text1{
+  width:25%;
+  border-right:1.2px dashed rgb(129, 156, 136);
+  filter:drop-shadow(1px 2px 1px grey);
+}
+
+.text2{
+  width:25%;
+  border-right:1.2px dashed rgb(129, 156, 136);
+  filter:drop-shadow(1px 2px 1px grey);
+  
+}
+
+.text3{
+  width:25%;
+  border-right:1.2px dashed rgb(129, 156, 136);
+  filter:drop-shadow(1px 2px 1px grey);
+}
+
+.text4{
+  width:25%;
+  filter:drop-shadow(1px 2px 1px grey);
+}
+
+.tabs{
+  display:flex;
+  flex-direction:row;
+  height: 25px;
+  position:fixed;
+  top:0px;
+  width:100%;
+  padding-top:8px;padding-bottom:10px;
+  border-bottom:1.5px solid  rgb(129, 156, 136);
+  text-align:center;
+  box-shadow: 4px 2px 5px grey;
+  background-color: rgb(216,225,222);
+  transition: All 0.4s ease; 
+  -webkit-transition: All 0.4s ease;
+}
+
+.topBold{
+  font-weight: bold;
+  font-size:90%;
+}
+
+.top{
+  font-weight: 300;
+  font-size:90%;
+}

@@ -1,0 +1,60 @@
+<!--pages/applyStack/applyStack.wxml-->
+
+<form bindsubmit="saveForm">
+
+<view class="Pic" catchtap="getPic">
+  <image src="{{src}}" class="{{judge==1? 'inPic' : 'none'}}}" mode="{{judge==1?'aspectFit':'aspectFill'}}"></image>
+  <image src="../../images/delete.svg" class="deleteButton" hidden="{{judge==1?true:false}}" catchtap="deletePic"></image>
+</view>
+
+<view class="dateLine">
+  <image src="../../images/rili.svg" class="datePic"></image>
+  <view class="theDate">{{formateDate}}</view>
+</view>
+
+
+<view class="title">
+  <view class="titleName">书库名称</view>
+  <view class="titleText"><input name="stackNameInput" placeholder="您申请创建的书库名称" maxlength="17" placeholder-style="color:#999999" value="{{stackNameValue}}"></input></view>
+</view>
+
+<view class="hr"></view>
+
+<view class="title">
+  <view class="titleName">您的学号</view>
+  <view class="titleText"><input name="numberInput" maxlength="20" placeholder-style="color:#999999" value="{{numberValue}}"></input></view>
+</view>
+
+<view class="hr"></view>
+
+<view class="title">
+  <view class="titleName">您的姓名</view>
+  <view class="titleText"><input name="nameInput" placeholder-style="color:#999999" type="text" value="{{nameValue}}"></input></view>
+</view>
+
+<view class="hr"></view>
+<view class="title">
+  <view class="titleName">所属组织</view>
+  <view class="titleText"><input name="orgInput" placeholder="书库所属的组织" placeholder-style="color:#999999" value="{{orgValue}}"></input></view>
+</view>
+
+<view class="hr"></view>
+<view class="title">
+  <view class="titleName">联系方式</view>
+  <view class="titleText"><input name="contactInput" placeholder="填写一种联系方式" placeholder-style="color:#999999" value="{{contactValue}}"></input></view>
+</view>
+
+<view class="hr"></view>
+
+<view class="titleTwo">
+  <view class="titleName">备注</view>
+  <textarea name="extraInput" class="textArea" maxlength="2000" value="{{extraValue}}"></textarea>
+</view>
+
+<view class="hr"></view>
+
+<button class="saveButton" form-type="submit" size="mini">申请</button>
+
+<view class="title"></view>
+
+</form>   

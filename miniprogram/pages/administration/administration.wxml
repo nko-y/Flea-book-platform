@@ -1,0 +1,62 @@
+<!--pages/administration/administration.wxml-->
+<loading hidden="{{!isLoading}}">正在加载</loading>
+
+<view class="all" wx:if="{{!isLoading}}">
+  <form bindsubmit="saveform">
+    <view class="stackInfoView">   
+       <view class="Pic" catchtap="getPic">
+           <image src="{{src}}" class="stackImg" mode="aspectFill"></image>
+        </view>
+
+        <view class="infoBox">
+          <view class="contact">
+            <view class="rec"></view>
+            <view class="contactBox">
+               <view class="contactView"><text class="contactText">书库名</text></view>
+               <scroll-view scroll-x="true" class="titleText"><input name="stackNameInput" maxlength="17" value="{{allData.bookStack_name}}" style="font-size:75%" disabled="{{!isSetUper}}"></input></scroll-view>
+            </view>
+          </view>
+
+          <view class="contact">
+            <view class="rec"></view>
+            <view class="contactBox">
+              <view class="contactView"><text class="contactText">管理组织</text></view>
+              <scroll-view scroll-x="true" class="titleText"><input disabled="{{!isSetUper}}" name="orgInput" maxlength="17" value="{{allData.bookStack_org}}" style="font-size:75%"></input></scroll-view>
+            </view>
+          </view>
+
+          <view class="contact">
+            <view class="rec"></view>
+            <view class="contactBox">
+               <view class="contactView"><text class="contactText">联系方式</text></view>
+               <scroll-view scroll-x="true" class="titleText"><input disabled="{{!isSetUper}}" name="memberInput" value="{{allData.bookStack_contact}}" style="font-size:75%"></input></scroll-view>
+            </view>
+          </view>
+
+          <view class="contact">
+            <view class="rec"></view>
+            <view class="contactBox">
+              <view class="contactView"><text class="contactText">书库简介</text></view>
+              <scroll-view scroll-x="true" class="titleText"><input disabled="{{!isSetUper}}" name="infoInput"  value="{{allData.bookStack_detailInfo}}" style="font-size:75%"></input></scroll-view>
+            </view>
+          </view>
+        </view>
+        <button class="saveButton" form-type="submit" size="mini" hidden="{{!isSetUper}}">确认修改</button>
+
+    </view>
+  </form>
+  
+  <view class="button" bindtap="toShareReleases">
+    <text class="buttonText">书籍发布</text>
+  </view>
+  <view class="button" bindtap="toShareAdministration">
+    <text class="buttonText">书籍管理</text>
+  </view>
+  <view class="button" bindtap="toSharemember">
+    <text class="buttonText">成员管理</text>
+  </view>
+  <view class="button" bindtap="toShareEmail">
+    <text class="buttonText">邮件</text>
+    <text style="color:red" class="buttonText" decode="{{true}}" wx:if="{{isNew}}">(新)</text>
+  </view>
+</view>

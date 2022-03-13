@@ -1,0 +1,80 @@
+<!--pages/confirmOrder/confirmOrder.wxml-->
+
+<!--标题：确认订单-->
+<view class="title">
+  <text class="titleText">确认订单</text>
+</view>
+
+<!--分割线-->
+<view class="lines"></view>
+
+<!--确认用户联系方式-->
+<view class="myContact">
+  <view class="userInfo">
+    <open-data type="userAvatarUrl"></open-data>
+    <open-data type="userNickName"></open-data>
+  </view>
+  <view class="mainContact" bindtap="addContact">
+     <text class="mainContactText">请确认您的联系信息</text>
+     <image src="../../images/guide_.svg" class="icon"></image>
+  </view>
+</view>
+
+<!--确认订单内容-->
+<view class="checkAgain">
+  <view class="checkInfo1">
+      <image class="checkImg" src="{{dataSource.download_img[0]}}" mode="aspectFill"></image>
+      <view class="checkText">
+        <text class="checkPrice">¥ {{dataSource.book_price * number}}</text>
+        <text class="checkTip">请确认 订单信息</text>
+      </view>
+    </view>
+  
+  <view class="checkInfo">
+    <view class="checkInfo2">
+      <view class="leftBox">
+        <view class="rec"></view>
+        <text class="numberText">书名</text>
+      </view>
+      <view class="number">
+        <text class="text">{{dataSource.book_title}}</text>
+      </view>
+    </view>
+
+    <view class="checkInfo2">
+      <view class="leftBox">
+        <view class="rec"></view>
+        <text class="numberText">作者</text>
+      </view>
+      <view class="number">
+        <text class="text">{{dataSource.book_author}}</text>
+      </view>
+    </view>
+
+    <view class="checkInfo2">
+      <view class="leftBox">
+        <view class="rec"></view>
+        <text class="numberText">出版社</text>
+      </view>
+      <view class="number">
+        <text class="text">{{dataSource.book_pub}}</text>
+      </view>
+    </view>
+
+    <view class="checkInfo2">
+      <view class="leftBox">
+        <view class="rec"></view>
+        <text class="numberText">数量</text>
+      </view>
+      <view class="number">
+        <image src="../../images/minus.svg" class="minus" bindtap="minus"></image>
+        <text class="numberText_">{{number}}</text>
+        <image src="../../images/plus.svg" class="plus" bindtap="plus"></image>
+      </view>
+    </view>
+  </view>
+
+    <view class="submit" bindtap="submit">
+      <text class="checkText_">确认联系TA</text>
+    </view>
+</view>

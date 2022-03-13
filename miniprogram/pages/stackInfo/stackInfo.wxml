@@ -1,0 +1,45 @@
+<!--miniprogram/pages/stackInfo/stackInfo.wxml-->
+
+<view class="all">
+  <form bindsubmit="saveform">
+    <view class="stackInfoView">   
+       <view class="Pic" catchtap="getPic">
+           <image src="{{allData.bookStack_showImg}}" class="stackImg" mode="aspectFill"></image>
+        </view>
+
+        <view class="infoBox">
+          <view class="contact">
+            <view class="rec"></view>
+            <view class="contactBox">
+               <view class="contactView"><text class="contactText">书库名</text></view>
+               <scroll-view scroll-x="true" class="titleText"><input name="stackNameInput" maxlength="17" value="{{allData.bookStack_name}}" style="font-size:75%;margin-right: -2000rpx;" disabled="true"></input></scroll-view>
+            </view>
+          </view>
+
+          <view class="contact">
+            <view class="rec"></view>
+            <view class="contactBox">
+              <view class="contactView"><text class="contactText">管理组织</text></view>
+              <scroll-view scroll-x="true" class="titleText"><input disabled="true" name="orgInput" maxlength="17" value="{{allData.bookStack_org}}" style="font-size:75%;margin-right: -2000rpx;"></input></scroll-view>
+            </view>
+          </view>
+
+          <view class="contact">
+            <view class="rec"></view>
+            <view class="contactBox">
+               <view class="contactView"><text class="contactText">联系方式</text></view>
+               <scroll-view scroll-x="true" class="titleText"><input disabled="true" name="memberInput" value="{{allData.bookStack_contact}}" style="font-size:75%;margin-right: -2000rpx;"></input></scroll-view>
+            </view>
+          </view>
+
+          <view class="contact">
+            <view class="rec"></view>
+            <view class="contactBox">
+              <view class="contactView"><text class="contactText">书库简介</text></view>
+              <scroll-view scroll-x="true" class="titleText"><input disabled="true" name="infoInput"  value="{{allData.bookStack_detailInfo}}" style="font-size:75%;margin-right: -2000rpx;"></input></scroll-view>
+            </view>
+          </view>
+        </view>
+    </view>
+  </form>
+</view>

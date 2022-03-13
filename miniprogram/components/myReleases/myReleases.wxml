@@ -1,0 +1,60 @@
+<!--components/myReleases/myReleases.wxml-->
+
+<view class="all">
+  <view class="bookInfo1">
+    <view class="bookImg">
+      <image src="{{item.book_img[0]}}" class="img"></image>     
+    </view>
+    <view class="infos">
+      <view class="info">
+        <view class="iconView">
+          <image src="../../images/calendar.svg" class="icon"></image>
+        </view>
+        <view class="textView"><text class="text">{{item.book_createTime}}</text></view>
+      </view>
+
+      <view class="info">
+        <view class="iconView">
+          <image src="../../images/price.svg" class="icon"></image>
+        </view>
+        <view class="textView"><text class="text">{{item.book_price}}元</text></view>
+      </view>
+      
+      <view class="info">
+        <view class="iconView">
+          <image src="../../images/number.svg" class="icon"></image>
+        </view>
+        <view class="textView"><text class="text">{{item.book_num}}本</text></view>
+      </view>
+
+      <view class="info">
+        <view class="iconView">
+          <image src="../../images/book.svg" class="icon"></image>
+        </view>
+        <scroll-view scroll-y="true" class="textView"><text class="text">《{{item.book_title}}》/{{item.book_author}}/{{item.book_pub}}</text></scroll-view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{item.book_state==1}}" class="bookInfo2">
+    <scroll-view scroll-y="true" class="bookAccountView">
+      <text class="bookAccount">{{item.book_detailInfo}}</text>
+    </scroll-view>
+    <view class="check" bindtap="finished">
+       <image src="../../images/checked.svg" class="checked1"></image>
+    </view>
+    <view class="check" bindtap="deleteOne">
+       <image src="../../images/shanchu.svg" class="checked2"></image>
+    </view>
+  </view>
+  <view wx:else class="bookInfo2">
+    <scroll-view scroll-y="true" class="bookAccountView">
+      <text class="bookAccount">{{item.book_detailInfo}}</text>
+    </scroll-view>
+    <view class="check" bindtap="back">
+       <image src="../../images/back.svg" class="checked_"></image>
+    </view>
+    <view class="check" bindtap="deleteOne">
+       <image src="../../images/shanchu.svg" class="checked2"></image>
+    </view>
+  </view>
+</view>

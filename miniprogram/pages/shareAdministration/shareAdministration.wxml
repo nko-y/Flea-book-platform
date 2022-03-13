@@ -1,0 +1,30 @@
+<!--pages/shareAdministration/shareAdministration.wxml-->
+<loading hidden="{{!isLoading}}">正在加载</loading>
+
+<!-- 顶部栏 -->
+<view class="topBar">
+  <view class="first">书名</view>
+  <view class="second">详细信息</view>
+  <view class="third">操作</view>
+</view>
+
+<view wx:if="{{!isLoading}}" class="listItem">
+  <view class="BookItems" wx:for="{{allData}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+    <view class="oneRecord">
+      <view scroll-x="true" class="theTitle"><input class="titleText" disabled="true" value="【{{item.book_title}}】"></input></view>
+      <view class="theBlank"></view>
+      <view scroll-x="true" class="theDetail"><input class="containText" disabled="true" value="作者:{{item.book_author}} 出版社:{{item.book_pub}} 详细信息:{{item.book_detailInfo}}"></input></view>
+      <view class="theBlank"></view>
+      <view class="theMinus">
+        <image src="../../images/minus.svg" class="iconStyle" bindtap="minusOne" id="{{index}}"></image>
+      </view>
+      <view class="theNumber"><view class="numberText">{{item.book_num}}</view></view>
+      <view class="thePlus">
+        <image src="../../images/plus.svg" class="iconStyle" bindtap="plusOne" id="{{index}}"></image>
+      </view>
+      <view class="theDelete">
+        <image src="../../images/delete_.svg" class="iconStyle" bindtap="deleteOne" id="{{index}}"></image>
+      </view>
+    </view>
+  </view>
+</view>

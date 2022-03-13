@@ -1,0 +1,63 @@
+<!--pages/transactionCategory/transactionCategory.wxml-->
+<loading hidden="{{!isLoading}}">正在加载</loading>
+
+<view class="header" wx:if="{{!isLoading}}">
+  <view class="pic" bindtap="clickme">
+    <image class="inImg" src="../../images/select.svg"></image>
+  </view>
+  <view class="textInfo" bindtap="clickme">筛选</view>
+</view>
+
+<view class="all" wx:if="{{!isLoading&&allData.length!=0}}">
+  <view class="BookItems" wx:for="{{allData}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+    <bookItem_transaction item="{{item}}" bindisIn="turnToOrder"></bookItem_transaction>
+  </view>
+</view>
+
+<view wx:if="{{allData.length==0&&!isLoading}}" class="nomessage">
+  ----暂无相关书籍----
+</view>
+
+<view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus&&!isLoading}}"></view>
+<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus&&!isLoading}}">
+  <view class="part" catchtap="priceMax">
+    <view class="oneBlock">价格最高</view>
+    <view class="smallPoint" wx:if="{{state==1}}"><image style="width:40rpx;height:40rpx" src="../../images/point.svg"></image></view>
+  </view>
+  <view class="br"></view>
+  <view class="part" catchtap="priceMin">
+    <view class="oneBlock">价格最低</view>
+    <view class="smallPoint" wx:if="{{state==2}}"><image style="width:40rpx;height:40rpx" src="../../images/point.svg"></image></view>
+  </view>
+  <view class="br"></view>
+    <view class="part" catchtap="timeMin">
+    <view class="oneBlock">时间最近</view>
+    <view class="smallPoint" wx:if="{{state==3}}"><image style="width:40rpx;height:40rpx" src="../../images/point.svg"></image></view>
+  </view>
+  <view class="br"></view>
+    <view class="part" catchtap="timeMax">
+    <view class="oneBlock">时间最远</view>
+    <view class="smallPoint" wx:if="{{state==4}}"><image style="width:40rpx;height:40rpx" src="../../images/point.svg"></image></view>
+  </view>
+  <view class="br"></view>
+    <view class="part" catchtap="seeMax">
+    <view class="oneBlock">浏览最多</view>
+    <view class="smallPoint" wx:if="{{state==5}}"><image style="width:40rpx;height:40rpx" src="../../images/point.svg"></image></view>
+  </view>
+  <view class="br"></view>
+    <view class="part" catchtap="seeMin">
+    <view class="oneBlock">浏览最少</view>
+    <view class="smallPoint" wx:if="{{state==6}}"><image style="width:40rpx;height:40rpx" src="../../images/point.svg"></image></view>
+  </view>
+  <view class="br"></view>
+    <view class="part" catchtap="numMax">
+    <view class="oneBlock">数量最多</view>
+    <view class="smallPoint" wx:if="{{state==7}}"><image style="width:40rpx;height:40rpx" src="../../images/point.svg"></image></view>
+  </view>
+  <view class="br"></view>
+    <view class="part" catchtap="numMin">
+    <view class="oneBlock">数量最少</view>
+    <view class="smallPoint" wx:if="{{state==8}}"><image style="width:40rpx;height:40rpx" src="../../images/point.svg"></image></view>
+  </view>
+  <view class="br"></view>
+</view>

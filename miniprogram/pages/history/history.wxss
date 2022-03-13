@@ -1,0 +1,25 @@
+/* miniprogram/pages/history/history.wxss */
+
+.BookItems{
+  width: 48vw;
+  height: 450rpx;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.all{
+  width: 96vw;
+  margin: 0 auto;
+  margin-top: 40rpx;
+}
+
+.nomessage{
+  width: 60%;
+  margin: 40rpx auto;
+  font-size: 25rpx;
+  color: #AAAAAA;
+  text-align: center;
+  margin-top: 100rpx;
+}

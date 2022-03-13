@@ -1,0 +1,12 @@
+<!--pages/myBookShelf/myBookShelf.wxml-->
+<loading hidden="{{!isLoading}}">正在加载</loading>
+
+<view class="all">
+  <view class="box" wx:for="{{allData}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+      <myBooks item="{{item}}" binddeleteOne="deleteObject"/>
+   </view>
+</view>
+
+<view wx:if="{{allData.length==0&&!isLoading}}" class="nomessage">
+  ----你的书架空空如也----
+</view>

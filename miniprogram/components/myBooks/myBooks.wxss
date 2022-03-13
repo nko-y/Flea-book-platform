@@ -1,0 +1,166 @@
+/* components/myBooks/myBooks.wxss */
+
+.all{
+  height:100%;
+  margin-right:30rpx; margin-left:30rpx;margin-top:30rpx;
+}
+
+.ownerInfo{
+  width:90%;
+  height:220rpx;
+  background-color:white;
+  border-radius: 80rpx;
+  border:1px solid rgb(232, 241, 239);
+  box-shadow:1px -1px 2px rgb(232, 241, 239);
+}
+
+.img{
+  height:90rpx;width:100%;
+  display:flex;
+}
+
+.text{
+  height:50rpx;width:100%;
+  display:flex;
+}
+
+.bookInfo{
+  margin-top:-80rpx;
+  background:rgb(232, 241, 239);
+  background-image: linear-gradient(white 1px,transparent 0),
+                    linear-gradient(90deg,white 1px,transparent 0);
+  background-size:30rpx 30rpx;
+  width:100%;
+  display: flex;
+  flex-direction:column;
+  border-radius: 10rpx;
+  box-shadow:1px -1px 2px rgb(129, 156, 136);
+}
+
+.books{
+ 
+  height:300rpx;width:100%;
+  display:flex;flex-direction: column;
+}
+
+.bookAll_{
+  display: flex;flex-direction: row;
+  width:100%;
+  height:220rpx;
+}
+
+.checkbox{
+
+  height:50rpx;width:10%;
+  margin-top:15rpx;
+  padding-left:15rpx;
+}
+
+.rec{
+  width:50rpx;
+  height:50rpx;
+  border-radius:50%;
+  background-color:rgb(252, 251, 249);
+  display: flex;
+}
+
+.delete{
+  width:30rpx;height:30rpx;
+  margin:auto;
+}
+
+.bookImgView{
+
+  height:220rpx;width:45%;
+}
+
+.bookImg{
+  margin-top:15rpx;
+  height:200rpx;
+  width:285.6rpx;
+  background-color:rgb(252, 251, 249);
+  border-radius: 20rpx;
+}
+
+.priceAndNumber{
+
+  height:220rpx;width:45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ownerAvatar{
+  width:70rpx;
+  height:70rpx;
+  border-radius: 50%;
+  margin:auto;
+  overflow:hidden;
+  background-color: rgb(232, 241, 239);
+}
+
+.ownerInfoText{
+  font-size:80%;
+  color:gray;
+  margin-right:auto;margin-left:auto;
+
+}
+
+
+.minus{
+  width:40rpx;
+  height:40rpx;
+  margin-right:20rpx;
+}
+
+
+.plus{
+  width:40rpx;
+  height:40rpx;
+  margin-left:20rpx;
+}
+
+.bookPrice{
+  margin-top:15rpx;
+  color:rgb(129, 156, 136);
+  font-weight: bold;
+  font-size:110%;
+}
+
+.numberText_{
+  font-size:85%;
+  color:grey;
+}
+
+.number{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(252, 251, 249, 0.342);
+  border-radius: 4rpx;
+  margin-bottom:5rpx;
+  width:160rpx;
+}
+
+.bookAll{
+  display: flex;
+  flex-direction: row;
+  height:80rpx;width:100%;
+}
+
+.box1{
+  width:10%;
+  height:80rpx;
+}
+
+.bookview{
+  width:90%;
+  height:80rpx;
+  padding-top:5rpx;padding-right:30rpx;padding-left:20rpx;
+}
+
+.bookText{
+  font-size:75%;
+  width: 600rpx
+}

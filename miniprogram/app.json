@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/recommend/recommend",
+    "pages/transaction/transaction",
+    "pages/transactionCategory/transactionCategory",
+    "pages/transactionDetail/transactionDetail",
+    "pages/mine/mine",
+    "pages/share/share",
+    "pages/email/email",
+    "pages/confirmOrder/confirmOrder",
+    "pages/myBookShelf/myBookShelf",
+    "pages/personInformation/personInformation",
+    "pages/sharePlatform/sharePlatform",
+    "pages/myRecords/myRecords",
+    "pages/myReleases/myReleases",
+    "pages/administration/administration",
+    "pages/application/application",
+    "pages/applyAdministrator/applyAdministrator",
+    "pages/applyStack/applyStack",
+    "pages/myApplication/myApplication",
+    "pages/shareAdministration/shareAdministration",
+    "pages/shareReleases/shareReleases",
+    "pages/shareMember/shareMember",
+    "pages/shareEmail/shareEmail",
+    "pages/history/history",
+    "pages/stackInfo/stackInfo",
+    "pages/notice/notice",
+    "pages/questionnaire/questionnaire",
+    "pages/guide/guide"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#D8E1DE",
+    "navigationBarTitleText": "浙大跳蚤书籍平台",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "custom": true,
+    "list": [
+      {
+        "pagePath": "pages/transaction/transaction"
+      },
+      {
+        "pagePath": "pages/recommend/recommend"
+      },
+      {
+        "pagePath": "pages/share/share"
+      },
+      {
+        "pagePath": "pages/mine/mine"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "useExtendedLib": {
+    "kbone": true,
+    "weui": true
+  }
+}

@@ -1,0 +1,21 @@
+<!--components/bookItem/bookItem.wxml-->
+<view class="bookItem" bindtap="checkIn">
+  <view class="itemImage">
+    <image src="{{item.download_img[0]}}" class="bkImg" mode="aspectFill"></image>
+    <view class="theBack">
+      <image class="outtime" src="../../images/out.svg"></image>
+      <text class="outtimeword">{{item.book_createTime}} </text>
+      <image class="outtime2" src="../../images/jiage.svg"></image>
+      <text class="outtimeword">{{item.book_price}}</text> 
+    </view>
+  </view>
+  <view class="bl"></view>
+  <view class="itemDescription">【{{item.book_title}}】{{item.book_detailInfo}}</view>
+  <view class="itemlowest">
+    <view class="itemCatagory">{{category}}·{{item.book_type}}</view>
+    <view class="itemTime">
+      <text>{{item.book_allBrowse}}</text>
+      <image class="bropic" src="../../images/browse.svg"></image>
+    </view>
+  </view>
+</view>

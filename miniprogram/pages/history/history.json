@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "bookItem_transaction":"../../components/bookItem/bookItem"
+  },
+  "enablePullDownRefresh":false
+}

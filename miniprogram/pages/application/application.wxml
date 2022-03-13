@@ -1,0 +1,19 @@
+<!--pages/application/application.wxml-->
+
+<view class="all">
+  <view class="button" bindtap="applyStack">
+    <text class="buttonText">申请创建共享书库</text>
+  </view>
+
+  <view class="button" bindtap="applyAdministrator">
+    <text class="buttonText">申请成为现有共享书库管理员</text>
+  </view>
+
+  <view class="button" bindtap="administration">
+    <text class="buttonText">管理我的共享书库</text>
+  </view>
+
+  <view class="button" bindtap="myApplication">
+    <text class="buttonText">我的申请</text>
+  </view>
+</view>

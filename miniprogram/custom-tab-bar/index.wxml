@@ -1,0 +1,25 @@
+<!--custion-tab-bar/index.wxml-->
+
+<view class="tabs" style="{{translate}}" wx:if="{{canThisShow}}">  
+    <!-- 页面一 -->
+    <view class='text1' data-index='0' data-path='{{list[0].pagePath}}' bindtap='tab_bar_index'>
+        <view class='{{selected == 0 ? "topBold" : "top"}}'>{{list[0].text}}</view>
+        <view wx:if="{{selected == 0}}"><view class="onebar"></view></view>
+    </view>
+
+    <!-- 页面二 -->
+    <view class='text2' data-index='1' data-path='{{list[1].pagePath}}' bindtap='tab_bar_index'>
+        <view class='{{selected == 1 ? "topBold" : "top"}}'>{{list[1].text}}</view>
+    </view>
+
+    <!-- 页面三 -->
+    <view class='text3' data-index='2' data-path='{{list[2].pagePath}}' bindtap='tab_bar_index'>
+        <view class='{{selected == 2 ? "topBold" : "top"}}'>{{list[2].text}}</view>
+    </view>
+
+    <!-- 页面四 -->
+    <view class='text4' data-index='3' data-path='{{list[3].pagePath}}' bindtap='tab_bar_index'>
+        <view class='{{selected == 3 ? "topBold" : "top"}}'>{{list[3].text}}</view>
+    </view>
+
+</view>

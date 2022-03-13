@@ -1,0 +1,23 @@
+<!--pages/myRecords/myRecords.wxml-->
+<loading hidden="{{!isLoading}}">正在加载</loading>
+
+<!--顶部导航栏-->
+<view class="topBar">
+  <view class="waiting">
+    <image  src="../../images/waiting.svg" class="icon"></image>
+    <text class="barText_current">交易/共享申请</text>
+  </view>
+</view>
+
+<view style="height:100rpx"></view>
+
+<view wx:if="{{allData.length==0&&!isLoading}}" class="nomessage">
+  ----暂无相关申请----
+</view>
+
+<view wx:elif="{{!isLoading}}">
+  <view class="emailItems" wx:for="{{allData}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+    <oneEmail item="{{item}}" isOperating="{{isAdding}}" binddeleteTheEmail="deleteTheEmail"></oneEmail>
+  </view>
+</view>
+

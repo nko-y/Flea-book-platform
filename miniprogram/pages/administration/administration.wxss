@@ -1,0 +1,120 @@
+/* pages/administration/administration.wxss */
+
+.all{
+  width:100%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stackInfoView{
+  width:90vw;
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+  margin-top:40rpx;
+  border:2rpx dotted rgb(216,225,222); 
+  border-radius: 20rpx;
+  padding-bottom:20rpx;
+  margin-bottom:40rpx;
+}
+
+.Pic{
+  width:100%;
+  height:140rpx;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stackImg{
+  width:90rpx;height:90rpx;
+  border-radius: 50%;
+  background-color: rgb(232, 241, 239);
+}
+
+.button{
+  margin-top:20rpx;
+  height:80rpx;
+  width:60vw;
+  margin-bottom:20rpx;
+  background-color: rgb(216,225,222);
+  border-radius: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 1px -1px 2px grey;
+
+}
+
+.buttonText{
+  font-size:90%;
+  font-weight:bold;
+}
+
+.savebutton{
+  background-color: rgb(129, 156, 136);
+  border:1rpx solid rgb(129, 156, 136);
+  margin-bottom:10rpx;
+}
+
+.infoBox{
+  display: flex;
+  flex-direction: column;
+  margin-bottom:20rpx;
+  border-radius: 10rpx;
+  border:2rpx solid rgb(129, 156, 136);
+   width:80%;
+   padding-top:10rpx;padding-bottom:10rpx;
+}
+
+.contact{
+  border-bottom:2rpx dotted rgb(216,225,222);
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  margin-left:20rpx;margin-right:20rpx;
+  height:70rpx;
+}
+
+.rec{
+  margin-right:10rpx;
+  margin-left:6rpx;
+  width:30rpx;
+  height:30rpx;
+  background-color:rgb(216,225,222);
+}
+
+
+.contactBox{
+  height:70rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width:100%;
+}
+
+.contactView{
+  width:180rpx;
+  display:flex;
+  align-items: center;
+  padding-right:10rpx;
+  border-right:2.4rpx solid rgb(216,225,222);
+}
+
+.contactText{
+    font-size:80%;
+    font-weight:bold;    
+}
+
+
+.titleText{
+  height: 50rpx;
+  padding-left:10rpx;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+}

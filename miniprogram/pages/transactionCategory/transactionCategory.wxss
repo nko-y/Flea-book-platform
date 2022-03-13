@@ -1,0 +1,134 @@
+/* pages/transactionCategory/transactionCategory.wxss */
+page{
+  height: 100%;
+  width: 100%;
+}
+
+.BookItems{
+  width: 48vw;
+  height: 450rpx;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.all{
+  width: 96vw;
+  margin: 0 auto;
+  margin-top: 80rpx;
+}
+
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: whitesmoke;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10rpx;
+  z-index:2000;
+}
+
+.pic{
+  width: 8%;
+  height: 100%;
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  z-index:2000;
+}
+
+.inImg{
+  width: 45%;
+  height: 60%;
+  z-index:2000;
+}
+
+.textInfo{
+  width: 15%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #819C88;
+  font-size: 20rpx;
+  font-weight: bold;
+  z-index:2000;
+}
+
+/*使屏幕变暗  */
+.commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 80rpx;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+/*对话框 */
+.commodity_attr_box {
+  height: 720rpx;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 80rpx;
+  left: 0;
+  z-index: 1000;
+  background: whitesmoke;
+  border-bottom-left-radius: 10rpx;
+  border-bottom-right-radius: 10rpx ;
+  box-shadow: 0rpx 1rpx 4rpx grey;
+}
+
+.part{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.oneBlock{
+  height: 80rpx;
+  width: 60%;
+  margin-left: 40rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #999999;
+  font-weight: bold;
+  font-size: 30rpx;
+}
+
+.br{
+  height: 3rpx;
+  background-color: #DDDDDD;
+  width: 90%;
+  margin: 2rpx auto;
+}
+
+.smallPoint{
+  width: 25%;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.nomessage{
+  width: 60%;
+  margin: 40rpx auto;
+  font-size: 25rpx;
+  color: #AAAAAA;
+  text-align: center;
+  margin-top: 100rpx;
+}

@@ -1,0 +1,179 @@
+<!--pages/myApplication/myApplication.wxml-->
+<loading hidden="{{!isLoading}}">正在加载</loading>
+
+
+<!--顶部导航栏-->
+<view wx:if="{{waiting && !isLoading}}" class="topBar">
+  <view class="waiting">
+    <image  src="../../images/apply_stack.svg" class="icon"></image>
+    <text class="barText_current">书库申请</text>
+  </view>
+  <view class="success" bindtap="chooseFalse">
+    <image src="../../images/apply_manager_black.svg" class="icon"></image>
+    <text class="barText">管理员申请</text>
+  </view>
+</view>
+<view wx:elif="{{!isLoading}}" class="topBar">
+    <view class="waiting" bindtap="chooseWaiting">
+    <image src="../../images/apply_stack_black.svg" class="icon"></image>
+    <text class="barText">书库申请</text>
+  </view>
+  <view class="success">
+    <image src="../../images/apple_manager.svg" class="icon"></image>
+    <text class="barText_current">管理员申请</text>
+  </view>
+</view>
+
+
+
+
+<view wx:if="{{waiting && !isLoading && stackApply.length!=0}}" class="downPart">
+
+<view class="Pic">
+  <image src="{{src}}" class="none" mode="aspectFit"></image>
+</view>
+
+<view class="dateLine">
+  <image src="../../images/rili.svg" class="datePic"></image>
+  <view class="theDate">{{stackApply[0].bookStack_time}}</view>
+</view>
+
+
+<view class="title">
+  <view class="titleName">书库名称</view>
+  <view class="titleText"><input name="stackNameInput" placeholder="您申请创建的书库名称" maxlength="17" placeholder-style="color:#999999" value="{{stackApply[0].bookStack_name}}" disabled="true"></input></view>
+</view>
+
+<view class="hr"></view>
+
+<view class="title">
+  <view class="titleName">您的学号</view>
+  <view class="titleText"><input name="numberInput" maxlength="20" placeholder-style="color:#999999" value="{{stackApply[0].bookStack_createNumber}}" disabled="true"></input></view>
+</view>
+
+<view class="hr"></view>
+
+<view class="title">
+  <view class="titleName">您的姓名</view>
+  <view class="titleText"><input name="nameInput" placeholder-style="color:#999999" type="text" value="{{stackApply[0].bookStack_createName}}" disabled="true"></input></view>
+</view>
+
+<view class="hr"></view>
+<view class="title">
+  <view class="titleName">所属组织</view>
+  <view class="titleText"><input name="orgInput" placeholder="书库所属的组织" placeholder-style="color:#999999" value="{{stackApply[0].bookStack_org}}" disabled="true"></input></view>
+</view>
+
+<view class="hr"></view>
+<view class="title">
+  <view class="titleName">联系方式</view>
+  <view class="titleText"><input name="contactInput" placeholder="填写一种联系方式" placeholder-style="color:#999999" value="{{stackApply[0].bookStack_contact}}" disabled="true"></input></view>
+</view>
+
+<view class="hr"></view>
+
+<view class="titleTwo">
+  <view class="titleName">备注</view>
+  <textarea name="extraInput" class="textArea" maxlength="2000" value="{{stackApply[0].bookStack_detailInfo}}" disabled="true"></textarea>
+</view>
+
+<view class="hr"></view>
+
+<!-- 接下来是审核状态 -->
+<view wx:if="{{stackApply[0].bookStack_state==-1}}">
+  <view class="title">
+    <view class="titleName">申请状态</view>
+    <view class="titleText" style="color:red"><input name="stateInput" placeholder-style="color:#999999" value="申请未通过" disabled="true"></input></view>
+  </view>
+</view>
+<view wx:elif="{{stackApply[0].bookStack_state==0}}">
+  <view class="title">
+    <view class="titleName">申请状态</view>
+    <view class="titleText" style="color:#ffBA00"><input name="stateInput" placeholder-style="color:#999999" value="申请审核中" disabled="true"></input></view>
+  </view>
+</view>
+<view wx:elif="{{stackApply[0].bookStack_state==1}}">
+  <view class="title">
+    <view class="titleName">申请状态</view>
+    <view class="titleText" style="color:green"><input name="stateInput" placeholder-style="color:#999999" value="申请成功" disabled="true"></input></view>
+  </view>
+</view>
+
+<view class="hr"></view>
+
+<button class="saveButton" size="mini" hidden="{{stackApply[0].bookStack_state==1}}" bindtap="revokeStack">撤销</button>
+
+</view>
+
+
+
+<view wx:elif="{{!waiting && !isLoading && managerApply.length!=0}}" class="downPart">
+
+<view class="dateLine">
+  <image src="../../images/rili.svg" class="datePic"></image>
+  <view class="theDate">{{managerApply[0].applyStackManage_time}}</view>
+</view>
+
+<view class="title">
+  <view class="titleName">书库名称</view>
+  <view class="titleText"><input name="stackNameInput" placeholder="申请加入的书库名称" maxlength="17" placeholder-style="color:#999999" value="{{managerApply[0].applyStackManage_bookName}}" disabled="true"></input></view>
+</view>
+
+<view class="hr"></view>
+
+<view class="title">
+  <view class="titleName">您的学号</view>
+  <view class="titleText"><input name="numberInput" maxlength="20" placeholder-style="color:#999999" value="{{managerApply[0].applyStackManage_userStuId}}" disabled="true"></input></view>
+</view>
+
+<view class="hr"></view>
+
+<view class="title">
+  <view class="titleName">您的姓名</view>
+  <view class="titleText"><input name="nameInput" placeholder-style="color:#999999" value="{{managerApply[0].applyStackManage_userName}}" disabled="true"></input></view>
+</view>
+
+<view class="hr"></view>
+<view class="title">
+  <view class="titleName">联系方式</view>
+  <view class="titleText"><input name="contactInput" placeholder="您的联系方式" placeholder-style="color:#999999" value="{{managerApply[0].applyStackManage_userContact}}" disabled="true"></input></view>
+</view>
+
+<view class="hr"></view>
+
+<view class="titleTwo">
+  <view class="titleName">备注</view>
+  <textarea name="extraInput" class="textArea" maxlength="2000" value="{{managerApply[0].applyStackManage_detailInfo}}" disabled="true"></textarea>
+</view>
+
+<view class="hr"></view>
+
+<!-- 接下来是审核状态 -->
+<view wx:if="{{managerApply[0].applyStackManage_state==-1}}">
+  <view class="title">
+    <view class="titleName">申请状态</view>
+    <view class="titleText" style="color:red"><input name="stateInput" placeholder-style="color:#999999" value="申请未通过" disabled="true"></input></view>
+  </view>
+</view>
+<view wx:elif="{{managerApply[0].applyStackManage_state==0}}">
+  <view class="title">
+    <view class="titleName">申请状态</view>
+    <view class="titleText" style="color:#ffBA00"><input name="stateInput" placeholder-style="color:#999999" value="申请审核中" disabled="true"></input></view>
+  </view>
+</view>
+<view wx:elif="{{managerApply[0].applyStackManage_state==1}}">
+  <view class="title">
+    <view class="titleName">申请状态</view>
+    <view class="titleText" style="color:green"><input name="stateInput" placeholder-style="color:#999999" value="申请成功" disabled="true"></input></view>
+  </view>
+</view>
+
+<view class="hr"></view>
+
+<button class="saveButton" size="mini" hidden="{{managerApply[0].applyStackManage_state==1}}" bindtap="revokeManager">撤销</button>
+
+</view>
+
+<view wx:elif="{{!isLoading}}" class="nomessage">
+  <view>----暂无相关申请----</view>
+</view>

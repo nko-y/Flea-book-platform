@@ -1,0 +1,14 @@
+/* pages/email/email.wxss */
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #F1F1F1;
+}
+
+.nomessage{
+  width: 60%;
+  margin: 40rpx auto;
+  font-size: 25rpx;
+  color: #AAAAAA;
+  text-align: center;
+}

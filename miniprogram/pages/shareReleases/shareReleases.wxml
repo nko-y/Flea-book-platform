@@ -1,0 +1,67 @@
+<!--pages/shareReleases/shareReleases.wxml-->
+<form bindsubmit="saveForm">
+
+<swiper class="Pic" indicator-dots="true" current="{{currentItem}}" bindchange="changeItem">
+    <swiper-item style="width:100%;height:100%" wx:for="{{photoImage}}" wx:key="index" catchtap="getPic" wx:for-item="item">
+        <view class="swipPic">
+            <image src="{{item.src}}" class="{{item.judge==1? 'inPic' : 'none'}}}" mode="{{item.judge==1?'aspectFit':'aspectFill'}}"></image>
+        </view>
+    </swiper-item>
+</swiper>
+
+<view class="dateLine">
+  <image src="../../images/rili.svg" class="datePic"></image>
+  <view class="theDate">{{formateDate}}</view>
+</view>
+
+<view class="title">
+  <view class="titleName">书名</view>
+  <view class="titleText"><input name="titleInput" placeholder="书本名称" maxlength="17" placeholder-style="color:#999999" value="{{titleValue}}"></input></view>
+</view>
+
+<view class="hr"></view>
+
+<view class="title">
+  <view class="titleName">作者</view>
+  <view class="titleText"><input name="fromInput" placeholder="作者名字" maxlength="10" placeholder-style="color:#999999" value="{{pubValue}}"></input></view>
+</view>
+
+<view class="hr"></view>
+
+<view class="title">
+  <view class="titleName">出版</view>
+  <view class="titleText"><input name="pubInput" placeholder="出版社名称" maxlength="10" placeholder-style="color:#999999" value="{{authorValue}}"></input></view>
+</view>
+
+<view class="hr"></view>
+
+<view class="titleTwo">
+  <view class="titleName">详细信息</view>
+  <textarea name="abstractInput" class="textArea" maxlength="2000" value="{{detailValue}}"></textarea>
+</view>
+
+<view class="hr"></view>
+
+<view class="title">
+  <view class="titleName">数量</view>
+  <view class="titleText">
+    <image class="numberButton" src="../../images/minus.svg" catchtap="down"></image>
+    <input name="numberInput" disabled="true" class="theNumber" value="{{allNumber}}"></input>
+    <image class="numberButton" src="../../images/plus.svg" catchtap="up"></image>
+  </view>
+</view>
+
+<view class="hr"></view>
+
+<view class="title">
+  <view class="titleName" style="margin-right:40rpx">类别</view>
+  <view class="titleText"><picker range="{{categoryList}}" bindchange="changeCate"><input name="thecategory" value="{{categoryValue}}" style="width:400rpx" disabled="true"></input></picker></view>
+</view>
+
+<view class="hr"></view>
+
+<button class="saveButton" form-type="submit" size="mini">新建</button>
+
+<view class="title"></view>
+
+</form>

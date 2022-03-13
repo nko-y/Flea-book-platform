@@ -1,0 +1,45 @@
+<!--pages/questionnaire/questionnaire.wxml-->
+
+<form bindsubmit="saveForm">
+
+<view class="dateLine">
+  <image src="../../images/rili.svg" class="datePic"></image>
+  <view class="theDate">{{formateDate}}</view>
+</view>
+
+<view class="hr"></view>
+
+<view class="title">
+  <view class="titleName">您的学号</view>
+  <view class="titleText"><input name="numberInput" maxlength="20" placeholder-style="color:#999999" value="{{numberValue}}"></input></view>
+</view>
+
+<view class="hr"></view>
+
+<view class="title">
+  <view class="titleName">您的姓名</view>
+  <view class="titleText"><input name="nameInput" placeholder-style="color:#999999" value="{{nameValue}}"></input></view>
+</view>
+
+<view class="hr"></view>
+<view class="title">
+  <view class="titleName">联系方式</view>
+  <view class="titleText"><input name="orgInput"  placeholder-style="color:#999999" value="{{orgValue}}"></input></view>
+</view>
+
+<view class="hr"></view>
+
+<view class="title">
+  <view class="titleName">认证码</view>
+  <view class="titleText"><input name="checkInput" placeholder="您的认证码"  placeholder-style="color:#999999" value="{{checkValue}}"></input></view>
+</view>
+
+<view class="hr"></view>
+
+<view class="forButton">
+  <button class="saveButton" form-type="submit" size="mini">申请认证</button>
+</view>
+
+<view class="title"></view>
+
+</form>   

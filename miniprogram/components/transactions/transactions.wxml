@@ -1,0 +1,103 @@
+<!--components/transactions/transactions.wxml交易分类页面组件-->
+
+
+
+   <view class="userInfo_">
+   </view>
+    <view class="all_">
+  </view>
+
+<view class="userInfo">
+
+   <view class="avatar">
+        <image src="{{item.avatarUrl}}"></image>
+     </view>
+     <view class="userId">
+        <text class="userIdText">{{item.userId}}</text> 
+     </view>
+ 
+</view>
+
+<view class="all" bindtap="switchPage">
+  <image src="{{item.bookImg}}" class="bookImg"></image>
+
+  <view class="bookInfo">
+     <view class="bookTitle">
+        <text class="bookTitleText">{{item.bookTitle}}</text>
+      </view>
+      <view class="bookAuthor">
+        <text class="bookAuthorText">{{item.bookAuthor}}/{{item.publishingHouse}}</text>
+      </view>
+      <view class="lines"></view>
+  </view>
+
+  <view class="bookAccount">
+     <text class="bookAccountText">{{item.bookAccount}}</text>
+  </view>
+
+  <view class="contact"></view>
+</view>
+
+
+  
+  <!--<view class="userInfo"> 
+    <view class="userInfo_">    
+     <view class="avatar">
+        <image src="{{item.avatarUrl}}"></image>
+     </view>
+
+     <view class="userId">
+        <text class="userIdText">{{item.userId}}</text> 
+     </view>
+
+     <view class="userAuthority">
+        <text class="userAuthorityText">{{item.userAuthority}}</text>
+     </view>
+    </view>
+
+     <view class="userCredit">
+       <text class="userCreditText">积分：{{item.userCredit}}</text>   
+     </view>
+  </view>
+
+  <view class="bookInfo" bindtap="switchPage">
+    <view class="bookInfo1">
+    <view class="bookImg">
+       <image class="bookImg_" src="{{item.bookImg}}"></image>
+    </view>
+    
+    <view class="bookText">
+    
+      <view class="bookTitle">
+        <text class="bookTitleText">{{item.bookTitle}}</text>
+      </view>
+
+      <view class="bookAuthor">
+        <text class="bookAuthorText">{{item.bookAuthor}}/{{item.publishingHouse}}</text>
+      </view>
+
+
+      <view class="bookAccount">
+        <text class="bookAccountText">{{item.bookAccount}}</text>
+      </view>
+    </view>
+    </view>
+    
+   <view class="bottom" bindtap="switchPage"> 
+    <view class="bookDetail">
+      <view class="bookPrice">
+         <text class="bookPriceText">¥ {{item.bookPrice}}</text>
+      </view>
+      <view class="bookQuantity">
+         <text class="bookQuantityText">数量：{{item.bookQuantity}}</text>
+      </view>
+
+    </view>
+      <view class="publishDate">
+        <text class="publishDateText">{{item.publishDate}}</text>
+      </view>
+   </view>
+
+  </view>-->
+
+

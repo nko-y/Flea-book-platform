@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "transactionDetail": "../../components/transactionDetail/transactionDetail"
+  }
+}

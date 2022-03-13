@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "bookStack":"../../components/bookStack/bookStack"
+  }
+}

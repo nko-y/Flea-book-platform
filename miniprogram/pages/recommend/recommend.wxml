@@ -1,0 +1,54 @@
+<!--pages/recommend/recommend.wxml-->
+<loading hidden="{{!isLoading && !isLoadingTwo}}">正在加载</loading>
+
+<view wx:if="{{!hasUserInfo && canIUse && !isLoading && !isLoadingTwo}}" class="regPage">
+  <view class="theLogo">
+    <image src="../../images/logo.png" class="logoImg" mode="aspectFill"></image>
+  </view>
+  <view style="height:20%"></view>
+  <view class="theButton">
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" type="primary"> 授权登录 </button>
+  </view>
+  <view class="theButton">
+    <button bindtap="notRegister"> 暂不登录 </button>
+  </view>
+</view>
+
+<view wx:else class="allPage">
+
+<view class="occTabBar" wx:if="{{!isLoadingTwo}}"></view>
+<view class="searchTab" wx:if="{{!isLoadingTwo}}">
+  <view class="pic" bindtap="turnToPersonInfo">
+    <open-data type="userAvatarUrl" wx:if="{{isRegister}}"></open-data>
+    <image wx:else src="../../images/unreg.svg" class="unreg"></image>
+  </view>
+  <view class="search">
+     <image src="../../images/search.svg"></image>
+     <input type='text' placeholder='输入想要查找的书籍' confirm-type='search' value="{{inputValue}}" bindinput='inputBind' bindconfirm='clickSearch' bindinput=""></input>
+  </view>
+  <view class="pic" bindtap="turnToemail">
+    <image wx:if="{{!isRegister}}" class='emailIcon'  src='../../images/email.svg'></image>
+    <image wx:elif="{{!message}}" class='emailIcon'  src='../../images/email.svg'></image>
+    <image wx:else class='emailIcon'  src='../../images/infoemail.svg' ></image>
+  </view>
+</view>
+
+<swiper indicator-dots="true" autoplay='true' wx:if="{{!isLoadingTwo}}">
+<swiper-item>
+    <image mode="aspectFill" src="../../images/zju2.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image mode="aspectFill" src="../../images/zju1.jpg"></image>
+  </swiper-item>
+    <swiper-item>
+    <image mode="aspectFill" src="../../images/zju3.jpg"></image>
+  </swiper-item>
+</swiper>
+
+<view class="all" wx:if="{{!isLoadingTwo}}">
+  <view class="BookItems" wx:for="{{allData}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+    <bookItem_transaction item="{{item}}" bindisIn="turnToOrder"></bookItem_transaction>
+  </view>
+</view>
+
+</view>

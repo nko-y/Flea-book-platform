@@ -1,0 +1,29 @@
+/* pages/guide/guide.wxss */
+.text{
+  font-weight:bold;
+}
+
+.all{
+  margin-top:30rpx;
+  margin-left:40rpx;margin-right:40rpx;
+  border:2rpx dotted rgb(129, 156, 136);
+  height:100vh;
+  border-radius: 20rpx;
+  padding: 10rpx;
+}
+
+.line{
+  margin-left:auto;margin-right:auto;
+  width:30%;
+  border-bottom:5rpx solid rgb(129, 156, 136);
+}
+
+
+
+.textView{
+  display: flex;
+  align-items: center;
+  margin-top:30rpx;
+  margin-bottom:20rpx;
+  justify-content: center;
+}

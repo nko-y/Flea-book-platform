@@ -1,0 +1,40 @@
+<!--components/oneEmail/oneEmail.wxml-->
+<view class="all">
+  <view class="thetitle">
+    <view class="userImage">
+      <image src="{{item.personInfo.user_url}}" class="userPic" mode="aspectFill"/>
+    </view>
+    <view class="userInformation">
+      <view class="theName">
+      {{item.personInfo.user_name}}
+      <view wx:if="{{!item.email_reading}}"><image class="newImg" src="../../images/new.svg"></image></view>
+      </view>
+      <view class="theIntergral">
+      积分值:{{item.personInfo.user_integral}}
+      <view wx:if="{{item.personInfo.user_certified==1}}" style="margin-left:15rpx">已认证</view>
+      <view wx:if="{{item.personInfo.user_certified==0}}" style="margin-left:15rpx">未认证</view>
+      <view class="riliImg"><image class="width:18rpx;height:18rpx" src="../../images/rili.svg"></image></view>
+      <view>{{item.email_fromTime}}</view>
+      </view>
+    </view>
+    <view class="deleteIcon" bindtap="dE">
+      <image class="deleteImg" src="../../images/deleteEmail.svg"></image>
+    </view>
+  </view>
+
+  <view class="thecontain">
+    <view class="containtitle">
+      <view class="containtitleName">书名:</view>
+      <view class="containtitleText"><input name="titleInput" disabled="true" value="【{{item.bookInfo.book_title}}】" style="width:470rpx"></input></view>
+      <view class="containtitleText" style="margin-left:10rpx">{{item.email_allNumber}}本</view>
+    </view>
+    <view class="hr"></view>
+
+    <view class="titleTwo">
+      <view class="containtitleName">详细信息:</view>
+      <textarea name="abstractInput" class="textArea" disabled="true" value="{{item.email_content}}" style="width:600rpx"></textarea>
+    </view>
+
+  </view>
+
+</view>

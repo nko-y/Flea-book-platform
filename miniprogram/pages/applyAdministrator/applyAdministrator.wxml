@@ -1,0 +1,43 @@
+<!--pages/applyAdministrator/applyAdministrator.wxml-->
+
+<form bindsubmit="saveForm">
+
+<view class="title">
+  <view class="titleName">书库名称</view>
+  <view class="titleText"><input name="stackNameInput" placeholder="申请加入的书库名称" maxlength="17" placeholder-style="color:#999999" value="{{titleValue}}"></input></view>
+</view>
+
+<view class="hr"></view>
+
+<view class="title">
+  <view class="titleName">您的学号</view>
+  <view class="titleText"><input name="numberInput" maxlength="20" placeholder-style="color:#999999" value="{{pubValue}}"></input></view>
+</view>
+
+<view class="hr"></view>
+
+<view class="title">
+  <view class="titleName">您的姓名</view>
+  <view class="titleText"><input name="nameInput" placeholder-style="color:#999999" value="{{priceValue}}"></input></view>
+</view>
+
+<view class="hr"></view>
+<view class="title">
+  <view class="titleName">联系方式</view>
+  <view class="titleText"><input name="contactInput" placeholder="您的联系方式" placeholder-style="color:#999999" value="{{contactValue}}"></input></view>
+</view>
+
+<view class="hr"></view>
+
+<view class="titleTwo">
+  <view class="titleName">备注</view>
+  <textarea name="extraInput" class="textArea" maxlength="2000" value="{{detailValue}}"></textarea>
+</view>
+
+<view class="hr"></view>
+
+<button class="saveButton" form-type="submit" size="mini">申请</button>
+
+<view class="title"></view>
+
+</form>   

@@ -1,0 +1,12 @@
+<!--miniprogram/pages/history/history.wxml-->
+<loading hidden="{{!isLoading}}">正在加载</loading>
+
+<view class="all" wx:if="{{!isLoading&&allData.length!=0&&!isLoading}}">
+  <view class="BookItems" wx:for="{{allData}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+    <bookItem_transaction item="{{item}}"></bookItem_transaction>
+  </view>
+</view>
+
+<view wx:if="{{allData.length==0&&!isLoading}}" class="nomessage">
+  ----暂无相关历史记录----
+</view>

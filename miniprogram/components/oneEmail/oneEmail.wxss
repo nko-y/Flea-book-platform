@@ -1,0 +1,140 @@
+/* components/oneEmail/oneEmail.wxss */
+.all{
+  width: 92%;
+  margin: 40rpx auto;
+  height: 400rpx;
+  background-color:white;
+  border-radius: 20rpx;
+}
+
+.thetitle{
+  height: 25%;
+  background-color: rgb(216,225,222);
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.userImage{
+  width: 15%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.userPic{
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+}
+
+.userInformation{
+  width: 60%;
+  height: 100%;
+}
+
+.theName{
+  margin-top: 10rpx;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.theIntergral{
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 10px;
+  color: #888888;
+}
+
+.deleteIcon{
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  padding-right: 20rpx;
+}
+
+.riliImg{
+  margin-left:12rpx;
+  width: 40rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.deleteImg{
+  width: 30%;
+  height: 60%;
+}
+
+.newImg{
+  margin-left: 10rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.thecontain{
+  height: 75%;
+  width: 100%;
+}
+
+.containtitle{
+  display: flex;
+  flex-direction: row;
+  padding-left: 20rpx;
+  padding-top: 20rpx;
+  padding-bottom: 10rpx;
+  width: 90%;
+}
+
+.containtitleName{
+  margin-right: 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 25rpx;
+  font-weight: bold;
+}
+
+.containtitleText{
+  color: #444444;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 25rpx;
+}
+
+.hr{
+  border: 1px solid #cccccc;
+  opacity: 0.2;
+  width: 90%;
+  margin:0 auto;
+}
+
+.titleTwo{
+  padding-left: 20rpx;
+  padding-top: 20rpx;
+  padding-bottom: 10rpx;
+  width: 90%;
+}
+
+.textArea{
+  color:#444444;
+  margin-top:10rpx;
+  height:140rpx;
+  font-size: 25rpx;
+}

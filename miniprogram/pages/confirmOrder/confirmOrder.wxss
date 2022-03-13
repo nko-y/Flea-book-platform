@@ -1,0 +1,198 @@
+/* pages/confirmOrder/confirmOrder.wxss */
+
+
+.checkInfo1{
+  display: flex;
+  flex-direction: row;
+  margin-top:40rpx;
+  margin-left:70rpx;margin-right:70rpx;
+}
+
+.checkInfo2{
+  border-bottom:2rpx dotted rgb(129, 156, 136);
+  padding-top:12rpx;padding-bottom:12rpx;
+  margin-left:20rpx;margin-right:20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.checkImg{
+  height:160rpx;width:228rpx;
+  margin-top:20rpx;
+  margin-bottom:40rpx;
+  background-color: rgb(216,225,222);
+}
+
+.checkText{
+  margin-top:20rpx;margin-bottom:40rpx;margin-left:40rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.minus{
+  width:40rpx;
+  height:40rpx;
+  margin-right:20rpx;
+}
+
+
+.plus{
+  width:40rpx;
+  height:40rpx;
+  margin-left:20rpx;
+}
+
+.submit{
+  margin-top:30rpx;
+  margin-left:auto;margin-right:auto;
+  width:200rpx;
+  min-height:80rpx;
+  background-color: rgb(216,225,222);
+  border-radius:10rpx;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkPrice{
+  color:rgb(129, 156, 136);
+  font-weight: bold;
+  font-size:110%;
+}
+
+.checkTip{
+  color:grey;
+  font-size:90%;
+}
+
+.numberText{
+  font-size:90%;
+}
+
+.leftBox{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width:160rpx;
+  margin-top:10rpx;margin-bottom:10rpx;
+  border-right:2.4rpx solid rgb(216,225,222);
+}
+
+.rec{
+  width:30rpx;height:30rpx;
+  margin-right:20rpx;
+  background-color: rgb(216,225,222);
+}
+
+.number{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.numberText_{
+  font-size:85%;
+  color:grey;
+}
+
+.checkText_{
+  margin:auto;
+}
+
+.checkAgain{
+  height: 850rpx;
+  width: 100%;
+  padding-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.title{
+  padding:10rpx;
+  margin-top:40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleText{
+  font-weight: bold;
+  size:120%;
+}
+
+.lines{
+  height:8rpx;width:30%;margin:auto;
+  border-top:2.4rpx solid rgb(129, 156, 136);
+  border-bottom:2.4rpx solid rgb(129, 156, 136);
+  margin-bottom:10px;
+}
+
+.myContact{
+  display: flex;
+  flex-direction: column;
+}
+
+.userInfo{
+
+  display: flex;
+  flex-direction: row;
+  margin-top:30rpx;
+  margin-left:70rpx;margin-right:70rpx;
+  padding:20rpx;
+  border-radius: 60rpx;
+  height:120rpx;
+  z-index:0;
+  background-color: rgb(216,225,222);
+}
+
+open-data[type="userAvatarUrl"]{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right:30rpx;
+}
+
+open-data[type="userNickName"]{
+  font-size:80%;
+}
+
+.mainContact{
+  margin-left:70rpx;margin-right:70rpx;
+  margin-top:-80rpx;
+  height:180rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index:1;
+  background-color: white;
+  box-shadow:2rpx 4rpx 5rpx grey;
+  border-radius: 6rpx;
+  padding-left:60rpx;padding-right:60rpx;
+}
+
+.mainContactText{
+  font-size:80%;
+  color:grey;
+}
+
+.icon{
+  width:50rpx;
+  height:50rpx;
+}
+
+.checkInfo{
+  display: flex;
+  flex-direction: column;
+  margin-left:40rpx;margin-right:40rpx;
+  border:2rpx solid rgb(129, 156, 136);
+  border-radius: 10rpx;
+}
+
+.text{
+  font-size:80%;
+}

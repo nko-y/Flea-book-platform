@@ -1,0 +1,70 @@
+<!--components/myRecords/myRecords.wxml-->
+
+
+<view class="all">
+  <view class="bookInfo1">
+    <view class="bookImg">
+      <image src="" class="img"></image>      
+    </view>
+    <scroll-view scroll-y="ture" class="infos">
+      <view class="info">
+        <view class="iconView">
+          <image src="../../images/type.svg" class="icon"></image>
+        </view>
+        <view class="textView"><text class="text">{{item.type}}</text></view>
+      </view>
+      
+      <view class="info">
+        <view class="iconView">
+          <image src="../../images/book.svg" class="icon"></image>
+        </view>
+        <scroll-view scroll-y="true" class="textView"><text class="text">《{{item.bookTitle}}》/{{item.bookAuthor}}/{{item.publishingHouse}}</text></scroll-view>
+      </view>
+
+      <view class="info">
+        <view class="iconView">
+          <image src="../../images/price.svg" class="icon"></image>
+        </view>
+        <view class="textView"><text class="text">{{item.bookPrice}}元</text></view>
+      </view>
+      
+      <view class="info">
+        <view class="iconView">
+          <image src="../../images/number.svg" class="icon"></image>
+        </view>
+        <view class="textView"><text class="text">{{item.bookNumber}}本</text></view>
+      </view>
+      
+      <view class="info">
+        <view class="iconView">
+          <image src="../../images/bookOwner.svg" class="icon"></image>
+        </view>
+        <scroll-view scroll-y="true" class="textView"><text class="text">{{item.bookOwner}}/{{item.ownerAuthority}}/{{item.ownerCredit}}积分</text></scroll-view>
+      </view>
+      
+      <view class="info">
+        <view class="iconView">
+          <image src="../../images/calendar.svg" class="icon"></image>
+        </view>
+        <view class="textView"><text class="text">{{item.publishDate}}</text></view>
+      </view>
+
+    </scroll-view>
+  </view>
+  <view wx:if="{{! item.state}}" class="bookInfo2">
+    <scroll-view scroll-y="true" class="bookAccountView">
+      <text class="bookAccount">{{item.bookAccount}}</text>
+    </scroll-view>
+    <view class="check">
+       <image src="../../images/checked.svg" class="checked"></image>
+    </view>
+  </view>
+  <view wx:else class="bookInfo2">
+    <scroll-view scroll-y="true" class="bookAccountView">
+      <text class="bookAccount">{{item.bookAccount}}</text>
+    </scroll-view>
+    <view class="check">
+       <image src="../../images/false_.svg" class="checked"></image>
+    </view>
+  </view>
+</view>

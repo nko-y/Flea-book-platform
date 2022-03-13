@@ -1,0 +1,102 @@
+<!--miniprogram/pages/shareMember/shareMember.wxml-->
+
+<!--顶部导航栏-->
+<view wx:if="{{waiting}}" class="topBar">
+  <view class="waiting">
+    <image  src="../../images/waiting_check.svg" class="icon"></image>
+    <text class="barText_current">待审核</text>
+  </view>
+  <view class="success" bindtap="chooseFalse">
+    <image src="../../images/ok_uncheck.svg" class="icon"></image>
+    <text class="barText">审核通过</text>
+  </view>
+</view>
+<view wx:else class="topBar">
+    <view class="waiting" bindtap="chooseWaiting">
+    <image src="../../images/waiting_uncheck.svg" class="icon"></image>
+    <text class="barText">待审核</text>
+  </view>
+  <view class="success">
+    <image src="../../images/ok_check.svg" class="icon"></image>
+    <text class="barText_current">审核通过</text>
+  </view>
+</view>
+
+<view wx:if="{{waiting && nowwait==-1}}" class="nomessage">
+----暂无相关申请----
+</view>
+
+<view wx:elif="{{!waiting && nowpass==-1}}" class="nomessage">
+----暂无通过申请----
+</view>
+
+<view class="downPart" wx:else>
+<form bindsubmit="saveForm">
+
+<view class="title">
+  <view class="titleName">书库名称</view>
+  <view class="titleText" wx:if="{{waiting}}"><input name="stackNameInput" maxlength="17" placeholder-style="color:#999999" value="{{nowwaitShow.applyStackManage_bookName}}" disabled="true"></input></view>
+  <view class="titleText" wx:else><input name="stackNameInput" maxlength="17" placeholder-style="color:#999999" value="{{nowpassShow.applyStackManage_bookName}}" disabled="true"></input></view>
+</view>
+
+<view class="hr"></view>
+
+<view class="title">
+  <view class="titleName">申请学号</view>
+  <view class="titleText" wx:if="{{waiting}}"><input name="numberInput" maxlength="20" placeholder-style="color:#999999" value="{{nowwaitShow.applyStackManage_userStuId}}" disabled="true"></input></view>
+  <view class="titleText" wx:else><input name="numberInput" maxlength="20" placeholder-style="color:#999999" value="{{nowpassShow.applyStackManage_userStuId}}" disabled="true"></input></view>
+</view>
+
+<view class="hr"></view>
+
+<view class="title">
+  <view class="titleName">申请姓名</view>
+  <view class="titleText" wx:if="{{waiting}}"><input name="nameInput" placeholder-style="color:#999999" value="{{nowwaitShow.applyStackManage_userName}}" disabled="true"></input></view>
+  <view class="titleText" wx:else><input name="nameInput" placeholder-style="color:#999999" value="{{nowpassShow.applyStackManage_userName}}" disabled="true"></input></view>
+</view>
+
+<view class="hr"></view>
+<view class="title">
+  <view class="titleName">联系方式</view>
+  <view class="titleText" wx:if="{{waiting}}"><input name="contactInput" placeholder-style="color:#999999" value="{{nowwaitShow.applyStackManage_userContact}}" disabled="true"></input></view>
+  <view class="titleText" wx:else><input name="contactInput" placeholder-style="color:#999999" value="{{nowpassShow.applyStackManage_userContact}}" disabled="true"></input></view>
+</view>
+
+<view class="hr"></view>
+
+<view class="titleTwo">
+  <view class="titleName">备注</view>
+  <textarea name="extraInput" class="textArea" maxlength="2000" value="{{nowwaitShow.applyStackManage_detailInfo}}" wx:if="{{waiting}}" disabled="true"></textarea>
+  <textarea name="extraInput" class="textArea" maxlength="2000" value="{{nowpassShow.applyStackManage_detailInfo}}" wx:else disabled="true"></textarea>
+</view>
+
+<view class="hr"></view>
+
+<view style="height:40rpx"></view>
+
+<view class="pageButton">
+  <view class="leftButton">
+    <button size="mini" class="buttonType" wx:if="{{waiting}}" bindtap="getLastWait">上一个</button>
+    <button size="mini" class="buttonType" wx:else bindtap="getLastPass">上一个</button>
+  </view>
+  <view style="width:30%"></view>
+  <view class="rightButton">
+    <button size="mini" class="buttonType" wx:if="{{waiting}}" bindtap="getNextWait">下一个</button>
+    <button size="mini" class="buttonType" wx:else bindtap="getNextPass">下一个</button>
+  </view>
+</view>
+
+<view class="hr"></view>
+
+<view style="height:40rpx" wx:if="{{waiting}}"></view>
+
+<button type="primary" style="height:80rpx" hidden="{{!waiting}}" bindtap="okOne">审核通过</button>
+<view style="height:20rpx" wx:if="{{waiting}}"></view>
+<button style="height:80rpx;background-color:red;color:white" hidden="{{!waiting}}" bindtap="disokOne">审核不通过</button>
+
+
+<view class="title"></view>
+
+</form>  
+
+</view>

@@ -1,0 +1,16 @@
+/* pages/myBookShelf/myBookShelf.wxss */
+
+.all{
+  width:100%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.nomessage{
+  width: 60%;
+  margin: 40rpx auto;
+  font-size: 25rpx;
+  color: #AAAAAA;
+  text-align: center;
+}

@@ -1,0 +1,179 @@
+/* components/transactions/transactions.wxss */
+
+
+
+.userInfo{
+  display:flex;
+  flex-direction:row;
+  height:240rpx;
+  width:75%;
+  border-radius: 80rpx;
+  box-shadow: 0rpx -2rpx 4rpx grey;
+  background-color: white;
+  margin:60rpx 0rpx 0rpx 40rpx;
+}
+
+.avatar{
+  width:60rpx;
+  height:60rpx;
+  border-radius:50%;
+  border:4rpx solid whitesmoke;
+  margin:20rpx;
+  margin-left:40rpx;
+}
+
+
+
+.userId{
+  margin:20rpx 6rpx 20rpx 6rpx;
+}
+
+.userIdText{
+  font-size:85%;
+  font-weight:bold;
+}
+
+.all{
+  margin:-140rpx 0rpx 0rpx 40rpx;
+  background-color:white;
+  border-radius: 20rpx;
+  width:90%;
+  box-shadow: 2rpx 4rpx 6rpx grey;
+  display:flex;
+  flex-direction: column;
+
+}
+
+
+.all_{
+  position:fixed;
+  top:136rpx;left:20rpx;
+  z-index:-1;
+  background-color:rgb(216,225,222);
+  border-radius: 20rpx;
+  width:90%;
+  display:flex;
+  flex-direction: column;
+  box-shadow: 2rpx 4rpx 6rpx grey;
+}
+
+.userInfo_{
+  position:fixed;
+  top:36rpx;left:20rpx;
+  z-index:-1;
+  height:240rpx;
+  width:75%;
+  border-radius: 80rpx;
+  box-shadow: 0rpx -2rpx 4rpx grey;
+  background-color: rgb(216,225,222);
+
+}
+
+.bookImg{
+  margin-top:16rpx;
+  height:472rpx;
+  width:100%;  
+}
+
+.bookInfo{
+  
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items: center;
+}
+
+.bookTitle{
+  padding-top:10rpx;padding-bottom:6rpx;
+}
+
+.bookTitleText{
+  font-weight:bold;
+}
+
+.bookAuthorText{
+  font-size:80%;
+
+}
+
+.lines{
+  width:25%;
+  margin-top:16rpx;
+  height:6rpx;
+  border-top:3.2rpx solid rgb(129, 156, 136);
+  border-bottom:3.2rpx solid rgb(129, 156, 136);
+}
+
+.bookAccount{
+  
+  margin:auto;
+  width:83%;
+  margin-top:20rpx;
+  height:132rpx;
+ 
+}
+
+.bookAccountText{
+  font-size:85%;
+  color:grey;  
+  height:95%;
+   width:90%;
+  margin:auto;
+}
+
+.infoBox{
+  display: flex;
+  flex-direction: column;
+  margin-top:20rpx;
+  margin-bottom:20rpx;
+  border-radius: 10rpx;
+  border:2rpx solid rgb(129, 156, 136);
+   margin-left:40rpx;margin-right:40rpx;
+   padding-top:10rpx;padding-bottom:10rpx;
+}
+
+.contact{
+  border-bottom:2rpx dotted rgb(216,225,222);
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  padding-top:10rpx;padding-bottom:10rpx;
+  margin-left:20rpx;margin-right:20rpx;
+  
+}
+
+.contact_{
+
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  padding-top:10rpx;padding-bottom:10rpx;
+  margin-left:20rpx;margin-right:20rpx;
+}
+
+.rec{
+  margin-right:10rpx;
+  margin-left:6rpx;
+  width:30rpx;
+  height:30rpx;
+  background-color:rgb(216,225,222);
+  
+}
+
+
+.contactBox{
+
+  height:46rpx;  
+  
+}
+
+.contactText{
+    font-size:80%;
+    padding-right:10rpx;
+
+    border-right:2.4rpx solid rgb(216,225,222);
+}
+.contactText_{
+    font-size:75%;
+    padding-left:10rpx;
+}

@@ -1,0 +1,118 @@
+<!--components/transactions/transactions.wxml交易分类页面组件-->
+
+
+<!--底层绿阴影-->
+<view class="userInfo_">
+</view>
+<view class="all_">
+   <swiper class="bookImg" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+    <block wx:for="{{item.download_img}}" wx:for-item="{{picItem}}" wx:key="index">
+      <swiper-item>
+         <image src="{{picItem}}" class="bookImg"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="bookInfo">
+     <view class="bookTitle">
+        <text class="bookTitleText">《{{item.book_title}}》</text>
+      </view>
+      <view class="bookAuthor">
+        <text class="bookAuthorText">{{item.book_author}}/{{item.book_pub}}</text>
+      </view>
+      <view class="lines"></view>
+  </view>
+  <view class="bookAccount">
+     <text class="bookAccountText"></text>
+  </view>
+
+<view class="infoBox">
+  <view class="contact">
+    <view class="rec"></view>
+    <view class="contactBox">
+      <text class="contactText">发布类别：{{item.book_type}}</text> 
+    </view>
+  </view>
+
+  <view class="contact">
+    <view class="rec"></view>
+    <view class="contactBox">
+      <text class="contactText" wx:if="{{item.user_certified}}">发布人认证状态：已认证</text>
+      <text class="contactText" wx:else>发布人认证状态：未认证</text>
+    </view>
+  </view>
+
+   <view class="contact">
+    <view class="rec"></view>
+    <view class="contactBox">
+      <text class="contactText">发布人积分：{{item.user_integral}}</text>
+    </view>
+  </view>
+</view>
+</view>
+
+
+<!--主要内容-->
+<view class="userInfo">
+   <view>
+      <image class="avatar" src="{{item.user_url}}" wx:if="{{item.book_bookStackId==''}}" mode="aspectFill"></image>
+      <image class="avatar" src="{{item.theBookStackInfo.bookStack_showImg}}" mode="aspectFill" wx:else></image>
+    </view>
+     <view class="userId">
+        <text class="userIdText" wx:if="{{item.book_bookStackId==''}}">{{item.user_name}}</text> 
+        <text class="userIdText" wx:else>{{item.theBookStackInfo.bookStack_name}}</text>
+     </view>
+</view>
+
+<view class="all" >
+  
+  <swiper class="bookImg" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+    <block wx:for="{{item.download_img}}" wx:for-item="picItem" wx:key="index">
+      <swiper-item>
+         <image src="{{picItem}}" class="bookImg" mode="aspectFill"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="bookInfo">
+     <view class="bookTitle">
+        <text class="bookTitleText">《{{item.book_title}}》</text>
+      </view>
+      <view class="bookAuthor">
+        <text class="bookAuthorText">{{item.book_author}}/{{item.book_pub}}</text>
+      </view>
+      <view class="lines"></view>
+  </view>
+
+  <scroll-view class="bookAccount" scroll-y="true">
+     <text class="bookAccountText">{{item.book_detailInfo}}</text>
+  </scroll-view>
+<view class="infoBox">
+  <view class="contact">
+    <view class="rec"></view>
+    <scroll-view class="contactBox" scroll-y="true">
+      <text class="contactText">类别</text>
+      <text class="contactText_">{{item.book_type}} | {{cate[item.book_category].content}}</text>
+    </scroll-view>
+  </view>
+
+  <view class="contact">
+    <view class="rec"></view>
+    <view class="contactBox">
+      <text class="contactText">发布人状态</text>
+      <text class="contactText_" wx:if="{{item.user_certified && item.book_bookStackId==''}}">已认证 | 积分：{{item.user_integral}}</text>
+      <text class="contactText_" wx:elif="{{item.book_bookStackId=='' && !item.user_certified}}">未认证 | 积分：{{item.user_integral}}</text>
+      <text class="contactText_" wx:else>共享书库</text>
+    </view>
+  </view>
+
+   <view class="contact_">
+    <view class="rec"></view>
+    <view class="contactBox">
+      <text class="contactText">单价&总量</text>
+      <text class="contactText_">¥{{item.book_price}} {{item.book_num}}本</text>
+      </view>
+  </view>
+</view>
+</view>
+
+
+  

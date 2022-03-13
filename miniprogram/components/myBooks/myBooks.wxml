@@ -1,0 +1,43 @@
+<!--components/myBooks/myBooks.wxml-->
+<view class="all">
+  <view class="ownerInfo">
+    <view class="img" wx:if="{{item.book_bookStackId==''}}"><image src="{{item.user_url}}" class="ownerAvatar" mode="aspectFill"></image></view>
+    <view class="img" wx:else><image src="{{item.theStackInfo.bookStack_showImg}}" class="ownerAvatar" mode="aspectFill"></image></view>
+    <view class="text" wx:if="{{item.book_bookStackId=='' && item.user_certified}}"><text class="ownerInfoText">认证学生|{{item.user_integral}}积分</text></view>
+    <view class="text" wx:elif="{{item.book_bookStackId=='' && !item.user_certified}}"><text class="ownerInfoText">未认证学生|{{item.user_integral}}积分</text></view>
+    <view class="text" wx:else><text class="ownerInfoText">共享书库</text></view>
+  </view>
+
+  <view class="bookInfo">
+    <view class="books">
+      <view class="bookAll_">
+      <view class="checkbox">
+        <view class="rec">
+          <image src="../../images/delete_.svg" class="delete" bindtap="deleteBook"> </image>
+        </view>
+      </view>
+
+      <view class="bookImgView">
+        <image class="bookImg" src="{{item.book_imgPath}}"></image>
+      </view>
+
+      <view class="priceAndNumber">
+        <text class="bookPrice">¥ {{item.book_price}}</text>
+        <view class="number">
+          <image src="../../images/minus.svg" class="minus"></image>
+          <text class="numberText_">{{item.book_num}}</text>
+          <image src="../../images/plus.svg" class="plus"></image>
+        </view>
+      </view>
+      </view>
+      <view class="bookAll">
+        <view class="box1"></view>
+        <view class="bookView">
+          <input class="bookText" value="【{{item.book_title}}】 | {{item.book_author}} | {{item.book_pub}}" disabled="true"></input>
+        </view>
+      </view>
+  
+    </view>
+  </view>
+</view>
+

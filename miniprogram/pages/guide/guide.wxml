@@ -1,0 +1,11 @@
+<!--pages/guide/guide.wxml-->
+<view class="textView">
+  <text class="text">使用指南</text>
+</view>
+
+<view class="line">
+</view>
+
+<view class="all">
+  <text>{{allData}}</text>
+</view>

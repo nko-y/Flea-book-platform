@@ -1,0 +1,9 @@
+<!--components/bookStack/bookStack.wxml-->
+<view class="oneBlock" bindtap="turnToStackPage">
+  <view class="oneShare">
+    <image class="oneImg" mode="aspectFill" src="{{item.bookStack_showImg}}"></image>
+    <view class="shadow"></view>
+  </view>
+</view>
+
+

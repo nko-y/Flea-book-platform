@@ -1,0 +1,68 @@
+/* pages/myRecords/myRecords.wxss */
+
+
+.topBar{
+  position:fixed;
+  top:0px;
+  display: flex;
+  flex-direction: row;
+  border-bottom:2px solid rgb(232, 241, 239);
+  height:80rpx;width:100%;
+  background-color: rgb(252, 251, 249);
+}
+
+.success{
+  display: flex;
+  flex-direction: row;
+  width:50%;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.waiting{
+  display:flex;
+  width:100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items:center;
+  border-right:1px dashed rgb(232, 241, 239);
+}
+
+.icon{
+  width:40rpx;height:40rpx;margin-right:20rpx;
+}
+
+.barText{
+  font-size:90%;
+}
+
+.barText_current{
+  font-size:90%;
+  font-weight:bold;
+  color:rgb(129, 156, 136);
+}
+
+.all{
+  margin-top:90rpx;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:center;
+}
+
+.card{
+  width:94vw;
+  border:1.2px solid rgb(129, 156, 136);
+  border-radius:10rpx;margin-bottom:10rpx;
+  display:flex;
+  flex-direction: column;
+}
+
+.nomessage{
+  width: 60%;
+  margin: 20rpx auto;
+  font-size: 25rpx;
+  color: #AAAAAA;
+  text-align: center;
+}

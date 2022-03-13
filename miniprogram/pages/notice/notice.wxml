@@ -1,0 +1,24 @@
+<!--pages/notice/notice.wxml-->
+<view class="textView">
+  <text class="text">公告栏</text>
+</view>
+
+<view class="line">
+</view>
+
+<view class="notice">
+  <view class="box" wx:for="{{notice}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+      <view class="item">
+         <view class="title">
+            <text class="titleText">| </text>
+            <text class="titleText2">{{item.title}}</text>
+            <text class="titleText"> |  </text>
+            <text class="date">{{item.date}}</text>
+         </view>
+         <view class="content">
+            <text class="contentText">{{item.content}}</text>
+         </view>
+      </view>
+  </view>
+</view>
+

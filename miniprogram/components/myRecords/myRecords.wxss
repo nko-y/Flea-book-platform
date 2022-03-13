@@ -1,0 +1,104 @@
+/* components/myRecords/myRecords.wxss */
+/* components/myReleases/myReleases.wxss */
+
+.all{
+  width:100%;
+  height:400rpx;
+  display: flex;
+  flex-direction:column;
+}
+
+.bookInfo1{
+  width:100%;
+  height:300rpx;
+  display:flex;flex-direction: row;
+}
+
+.bookInfo2{
+  width:100%;
+  height:100rpx;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;align-items: center;
+  background:rgb(232, 241, 239);
+  background-image: linear-gradient(white 1px,transparent 0),
+                    linear-gradient(90deg,white 1px,transparent 0);
+  background-size:30rpx 30rpx;
+}
+
+.bookAccountView{
+  width:80%;
+  height:95%;
+  padding:10rpx;
+}
+
+.bookAccount{
+  font-size:80%;
+  color:grey;
+}
+
+.bookImg{
+  height:300rpx;
+  padding:10rpx;
+}
+
+.img{
+  height:280rpx;width:399.84rpx;
+  background-color: rgb(129, 156, 136);
+  border-radius: 10rpx;
+}
+
+.infos{
+  display: flex;
+  flex-direction: column;
+}
+
+.info{
+  display:flex;
+  flex-direction: row;
+  height:50rpx;
+  padding-top:10rpx;
+}
+
+.iconView{
+  height:35rpx;
+  width:35rpx;
+  margin-right:10rpx;
+}
+
+.icon{
+  height:35rpx;
+  width:35rpx;
+}
+
+.text{
+  font-size:80%;
+  margin-right:10rpx;
+}
+
+.textView{
+    border-bottom:1.5px dotted rgb(232, 241, 239);
+}
+
+.checked{
+  width:65rpx;
+  height:65rpx;
+  margin:auto;
+}
+
+.checked_{
+  width:50rpx;
+  height:50rpx;
+  margin:auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgb(129, 156, 136);
+}
+
+.check{
+  width:20%;
+  height:100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}

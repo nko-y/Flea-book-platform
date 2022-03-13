@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "oneEmail":"../../components/oneEmail/oneEmail"
+  },
+  "enablePullDownRefresh":false
+}

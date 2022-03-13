@@ -1,0 +1,11 @@
+<!--components/category/category.wxml-->
+
+<view class="box" hover-class="aliceblue" bindtap="switchPage">
+  <view class="text">
+    <text class="content">{{item.content}}</text>
+  
+  </view>
+  <view class="icon">
+    <image class="iconImg" src="../../images/arrow-circle-right-outline.svg"></image>
+  </view>
+</view>

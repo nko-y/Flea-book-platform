@@ -1,0 +1,27 @@
+/* pages/application/application.wxss */
+
+.all{
+  width:100vw;
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button{
+  margin-top:20rpx;
+  margin-bottom:20rpx;
+  width:80vw;
+  height:100rpx;
+  background-color: rgb(216,225,222);
+  display: flex;
+  border-radius: 20rpx;
+  box-shadow: 1px -1px 2px grey;
+}
+
+.buttonText{
+  margin:auto;
+  font-size:90%;
+  font-weight: bold;
+}
